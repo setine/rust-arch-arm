@@ -11,6 +11,9 @@ RUN rustup toolchain add nightly
 RUN rustup default nightly
 RUN rustup target install arm-unknown-linux-gnueabihf
 
+RUN mkdir ~/.cargo
+COPY include/config ~/.cargo/
+
 RUN curl https://archlinuxarm.org/builder/xtools/x-tools6h.tar.xz > /tmp/tools.tar.xz \
     && tar xf /tmp/tools.tar.xz -C /opt
 

@@ -1,2 +1,2 @@
 [target.arm-unknown-linux-gnueabihf]
-linker = "/opt/tools/x-tools6h/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc"
+linker = "/opt/x-tools6h/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc"
