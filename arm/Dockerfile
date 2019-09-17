@@ -19,5 +19,8 @@ COPY include/config /root/.cargo/
 
 ENV CC_arm_unknown_linux_gnueabihf /opt/x-tools6h/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc
 
+RUN pacman --noconfirm -Sy openssl
+ENV PKG_CONFIG_ALLOW_CROSS=1
+
 CMD ["cargo", "build", "--release", "--target=arm-unknown-linux-gnueabihf"]
 #CMD ["bash"]
